@@ -5,16 +5,17 @@
     <title>STEM Careers Museum</title>
 
         <style>
-            .skip-link {display: inline-block;
-                        position: static;
-                        margin: 73px;
-                        padding: 8px 12px;
+            .skip-link {display: block;
+                        margin: 0;
+                        padding: 10px 12px;
                         background: #ffbf47;
                         color: #000;
                         font-weight: bold;
-                        text-decoration: none;}
-            .skip-link:focus {outline: 3px solid #000;}
-    
+                        text-decoration: none;
+                        outline: none;}
+
+             .skip-link:focus {top: 10px;}
+             
             header {padding: 20px 80px;
                     background-color: #ffffff;}
 
@@ -45,7 +46,6 @@
                       border: 0;}
             
             h1 {padding-left: 80px;
-                padding-top: 20px;
                 text-align: left;
                 color: #335481;
                 font-family:"DM Serif Display", Roboto, serif;
@@ -187,11 +187,7 @@
         </nav>
     </header>
 
-    <main>
-        <span id="main-content" tabindex="-1" 
-              style="display: block; 
-                     height: 0; 
-                     overflow: hidden;"></span>
+    <main id="main-content">
     
     <h1>Stem Careers Museum<br>
         <span style="font-size: 24px; font-weight: 400; display: block; margin-top: 16px; letter-spacing: 0.2em; font-family: 'Rubik', sans-serif;">COMPANION GUIDE
@@ -272,7 +268,7 @@
         
 </section>
 
-    <section id="career-roadmap" aria-label="Career Roadmap">
+    <section id="career-roadmap">
         <h2>STEM Career Roadmap</h2>
 
         <div style="padding-bottom: 10px;" class="image-container">
