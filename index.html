@@ -7,7 +7,7 @@
         <style>
             .skip-link {display: inline-block;
                         position: static;
-                        margin: 10px;
+                        margin: 73px;
                         padding: 8px 12px;
                         background: #ffbf47;
                         color: #000;
@@ -17,8 +17,6 @@
     
             header {padding: 20px 80px;
                     background-color: #ffffff;}
-                            
-            .title {line-height: .5;}
 
             .hero-image {width: 100%;
                          display: block;}
@@ -93,11 +91,11 @@
                               display: flex;
                               gap: 10px; 
                               padding: 10px; 
-                              align-items: center;} /* Align all items to the top of the container */
+                              align-items: center;} 
 
             .flexbox-left,
             .flexbox-right {text-align: left;
-                           flex: 1;} /*makes both columns equal width */
+                           flex: 1;} 
 
             .flexbox-right img,
             .flexbox-left img {display: block;
@@ -118,6 +116,7 @@
                        margin-bottom: 20px;}
             th, td {padding: 12px;}
             th {background-color: #ffc333}
+
             caption {border: none;
                      padding-bottom: 12px;
                      text-align: center;
@@ -128,8 +127,10 @@
                            margin-top: 20px;}
             .form-section p {font-weight: bold;
                             margin-top: 12px;}
-             label {display: block;
+            
+            label {display: block;
                     margin: 6px 0px;}
+
             input[type="text"] {width: 100%;
                                 max-width: 475px;
                                 padding: 8px;
@@ -141,6 +142,7 @@
                                       background-color: #eef5ff;}
             input[type="radio"],
             input[type="checkbox"] {margin-right: 8px;}
+
             button {margin-top: 12px;
                     padding: 10px 12px;
                     border: none;
@@ -148,6 +150,8 @@
                     border: 1px solid #333;
                     cursor: pointer;}
             button:hover {background-color: #bcd6fc;}
+            button:focus {background-color: #ff5c20;}
+
             nav ul {list-style: none;
                     margin: 0;
                     padding: 10px;
@@ -155,6 +159,9 @@
                     gap: 20px;
                     justify-content: center;
                     color: #1a4ed8;}
+                    
+            footer {padding: 80px;}
+
         </style>
 </head>
 
@@ -164,13 +171,13 @@
     <header>
         <nav aria-label="Page sections">
             <details>
-                <summary>Menu</summary>
-
+                <summary aria-expanded="false" role="button">Menu</summary>
                 <ul>
                     <li><a href="#review">Review Experience</a></li>
                     <li><a href="#career-fields">Career Fields</a></li>
                     <li><a href="#why-these-fields">Why These Fields Were Chosen</a></li>
-                    <li><a href="#career-roadmap-description">Career Roadmap</a></li>
+                    <li><a href="#career-roadmap">Career Roadmap</a></li>
+                    <li><a href="#career-path">Career Path</a></li>
                     <li><a href="#science-in-action">Science in Action</a></li>
                     <li><a href="#building-blocks">Building Blocks</a></li>
                     <li><a href="#stem-profile">STEM Profile</a></li>
@@ -186,29 +193,30 @@
                      height: 0; 
                      overflow: hidden;"></span>
     
-    <h1 class="title">Stem Careers Museum<br>
+    <h1>Stem Careers Museum<br>
         <span style="font-size: 24px; font-weight: 400; display: block; margin-top: 16px; letter-spacing: 0.2em; font-family: 'Rubik', sans-serif;">COMPANION GUIDE
         </span>
     </h1>
 
     <div class="hero">
-        <img class="hero-image" src="title-background.png" alt="">
+        <img class="hero-image" src="title-background2.png" alt="">
     
         <div class="hero-text">
-            You just explored three of the most exciting career fields in science: Marine Biology, Aerospace Engineering, and Botany. This page is your companion guide to everything you discovered along the way.
+            You just explored three of the most exciting career fields in science: Marine Biology, Aerospace Engineering and Botany. This page is your companion guide to everything you discovered along the way.
         </div>
     </div>
 
-    <div style="text-align: center; color: #358f5c; padding: 150px;">
+    <div style="text-align: center; color: #358f5c; padding: 150px; line-height: 32px;">
         <span style="font-size: 38px; font-style: italic; font-weight: 600; font-family:'Rubik', sans-serif;">
-            Whether the ocean, the stars, or the plant world caught
-        <br>your attention, you are in the right place.
+            Whether the ocean, the stars, or the plant world
+        <br>caught your attention, you are
+        <br>in the right place.
         </span>
     </div>
 
-    <h2 id="review" style="text-align: center; margin-bottom: 10px;">Let's Review Your Experience!</h2>
+    <h2 id="review"  style="padding-left: 80px;">Let's Review Your Experience!</h2>
 
-    <div class="flexbox-section">
+    <div class="flexbox-section" style="padding-top: 0px">
         <div class="flexbox-left">
             <h3>You Toured the STEM Careers Museum in FrameVR</h3>
             <p>
@@ -259,35 +267,36 @@
               font-size: 2rem;
               text-align: center;
               margin: 0;
-              line-height: 1.25;">These fields address major global challenges by protecting ecosystems, monitoring climate change, and supporting life on Earth. The work is not finished, and future breakthroughs may come from students like you.
+              line-height: 1.25;">These fields address major global challenges. Marine biologists are working to save coral reefs that support a quarter of all ocean life. Aerospace engineers are launching satellites that monitor climate change from space. Botanists are developing the crops that will feed the world as temperatures rise. These are not small problems. And the scientists solving them started exactly where you are right now.
     </p>      
         
 </section>
 
-    <section>
+    <section id="career-roadmap" aria-label="Career Roadmap">
+        <h2>STEM Career Roadmap</h2>
 
-        <div id="career-roadmap-description" 
-                 style="padding-bottom: 10px;" class="image-container">
-
-            <img src="career-roadmap.png" alt="Diagram showing the STEM career roadmap for a future scientist." aria-describedby="career-roadmap-description" class="image-career-roadmap" >
-     
+        <div style="padding-bottom: 10px;" class="image-container">
+            <figure>
+                 <img src="career-roadmap.png" alt="Diagram showing the STEM career roadmap for a future scientist." 
+                 aria-describedby="career-roadmap-description" class="image-career-roadmap" >
+                 <figcaption style="font-style: italic; color: #666666; font-size: 15px;">Career pathway from high school to an established STEM career</figcaption>
+            </figure>
         </div>
+            <div style="padding-top: 0px;">
 
-            <section style="padding-top: 0px;">
+             <h3 style="text-align: center;">About The Career Roadmap Diagram</h3>
 
-             <h2 style="text-align: center;">About The Career Roadmap Diagram</h2>
-
-                <p>This diagram shows the career pathway for a STEM scientist in four stages
+                <p id="career-roadmap-description">This diagram shows the career pathway for a STEM scientist in four stages
                 moving from left to right. The first stage is high school and college, where you
                 are encouraged to take AP science courses such as Biology, Chemistry,
                 Environmental Science, and Physics. The second stage explains the importance of prioritizing research experience over GPA while earning a Bachelor of Science degree. The third stage is graduate school, where
                 you can pursue a funded Master of Science or Ph.D. program and are encouraged to develop essential technical skills. The fourth stage stresses the importance of finding a professional to let you assist or shadow them. You can begin in entry-level roles such as Research Assistant, Lab Technician, or
                 Field Technician. 
                 </p>
-            </section>
+            </div>
     </section>
 
-    <section style="background-color: #EEF4F8; margin:0;">
+    <section id="career-path" style="background-color: #EEF4F8; margin:0;">
         <h2>Discover What the Path Actually Looks Like</h2>
 
             <ol>
@@ -323,14 +332,14 @@
         </section>
 
         <section id="building-blocks">
-            <h2>Explore How Scientists Use Five Core Building Blocks Across the Three Careers</h2>
+            <h2>Explore How Scientists Use Five Core Building Blocks</h2>
             <p>Every STEM scientist uses these five building blocks in their work. The table below shows what each one looks like across the three career fields you explored. </p>
         
 
              <table style="width: 100%">
-                <caption><strong>The Five Building Blocks in Action</strong></caption>
+                <caption>The Five Building Blocks in Action</caption>
                 <tr>
-                    <th scope="col"></th>
+                    <th scope="col" aria-label="Building Block Category"></th>
                     <th scope="col">Marine Biology</th>
                     <th scope="col">Aerospace Engineering</th>
                     <th scope="col">Botany</th>
@@ -374,34 +383,44 @@
                 </table>
 
             </section>
+                
+            
+        <section id="stem-profile" class="form-section" style="padding-bottom: 50px;">
+            <h2>Build Your STEM Profile</h2>
+            
+            <form>
 
-            <section id="stem-profile" class="form-section">
-                <h2>Build Your STEM Profile</h2>
-
-                <p>Which STEM field interested you the most?</p>
+            <fieldset>
+                <legend style="font-weight: bold;">Which STEM field interested you the most?</legend>
                     <label for="marine"><input type="radio" id="marine" name="field" value="marine"> Marine Biology</label>
                     <label for="aerospace"><input type="radio" id="aerospace" name="field" value="aerospace"> Aerospace Engineering</label>
                     <label for="botany"><input type="radio" id="botany" name="field" value="botany"> Botany</label>
-
-                <p>Which activities would you like to try?</p>
+            </fieldset>     
+                
+            <fieldset>
+                <legend style="font-weight: bold;">Which activities would you like to try?</legend>
                     <label for="fieldwork"><input type="checkbox" id="fieldwork" name="activities" value="fieldwork"> Field Research</label>
                     <label for="lab"><input type="checkbox" id="lab" name="activities" value="lab"> Lab experiments</label>
                     <label for="testing"><input type="checkbox" id="testing" name="activities" value="testing"> Engineering simulations</label>
+            </fieldset>
 
-                <label for="stem-career">What STEM career would you like to learn more about?</label>
-                    <input type="text" id="stem-career" name="stem-career" placeholder="Type your answer here">
+                <label for="stem-career" style="font-weight: bold;">
+                    What STEM career would you like to learn more about?
+                </label>
+                <input type="text" id="stem-career" name="stem-career" placeholder="Type your answer here">
 
-                <button type="button" onclick="alert('Your STEM profile has been saved!')">Save My STEM Profile</button>
-
+               <button type="button">Save My STEM Profile</button>
+           
+             </form> 
                 <p>Learn more from
                     <a href="https://www.noaa.gov" target="_blank" rel="noopener noreferrer">NOAA<span class="sr-only"> opens in a new tab</span></a>, 
                     <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer">NASA<span class="sr-only"> opens in a new tab</span></a>, 
                 and
                     <a href="https://botany.org" target="_blank" rel="noopener noreferrer">Botanical Society of America<span class="sr-only"> opens in a new tab</span></a>.
-                </p>
-   
-            </section>
-                <section id="references">
+                </p>  
+        </section>
+    </main>  
+                <footer id="references">
                     <h2>References</h2>
                     <ol>
                         <li>National Oceanic and Atmospheric Administration. (2023).
@@ -421,8 +440,7 @@
                             </a>
                         </li>
                     </ol>
-                </section>
-    </main>          
+                </footer>        
 </body>
 
 </html>
